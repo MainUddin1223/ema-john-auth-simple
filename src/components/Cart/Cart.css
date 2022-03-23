@@ -1,13 +1,15 @@
 .cart-div{
 font-family: 'Lato';
-background-color: #FF9900;
+background-color: rgba(255, 153, 0, 0.3);
 }
 .item-summary{
     color: #1C2B35;
+    margin-top: 0;
 }
 .cart-heading{
     font-size: 25px;
     line-height: 30px;
+    margin-top: 0;
 }
 .cart-div h6{
 

@@ -26,7 +26,6 @@ const Shop = () => {
             </div>
             <div className="cart-container">
                 <Cart cart={cart}></Cart>
-                <h1>{cart.length}</h1>
             </div>
         </div>
     );
