@@ -1,0 +1,19 @@
+.cart-div{
+font-family: 'Lato';
+background-color: #FF9900;
+}
+.item-summary{
+    color: #1C2B35;
+}
+.cart-heading{
+    font-size: 25px;
+    line-height: 30px;
+}
+.cart-div h6{
+
+font-style: normal;
+font-size: 21px;
+line-height: 25px;
+letter-spacing: 0.0015em;
+color: #0E161A;
+}
