@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Cart.css'
-const Cart = ({ cart }) => {
+const Cart = (props) => {
+    const { cart } = props
     let total = 0;
     for (const product of cart) {
         total = total + product.price

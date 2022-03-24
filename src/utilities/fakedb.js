@@ -28,7 +28,6 @@ const getStoredCart = () => {
     if (storedCart) {
         shoppingCart = JSON.parse(storedCart);
     }
-    console.log(shoppingCart);
     return shoppingCart
 }
 const removeFromDb = id => {
