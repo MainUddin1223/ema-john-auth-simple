@@ -2,6 +2,7 @@ import React from 'react';
 import './Product.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
 const Product = (props) => {
     const { handleAddToCart, product } = props;
     const { name, price, seller, ratings, img } = product;
@@ -16,7 +17,8 @@ const Product = (props) => {
 
             </div>
             <button className='btn-cart' onClick={() => { handleAddToCart(product) }}>
-                <p>Add to Cart</p>
+                    <p>Add to Cart</p>
+
                 <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
             </button>
         </div>

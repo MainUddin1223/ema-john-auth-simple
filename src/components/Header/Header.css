@@ -1,6 +1,9 @@
 .header{
+    z-index: 999999;
     height: 80px;
     background-color: #1C2B35;
+    position: sticky;
+    top: 1px;
     display: flex;
     align-items: center;
     justify-content: space-between;

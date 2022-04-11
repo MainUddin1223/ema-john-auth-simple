@@ -1,0 +1,43 @@
+.review-container{
+    width: 571px;
+    height: 107px;
+    display: flex;
+    margin: 8px auto;
+    border: 1px solid rgb(221, 209, 209);
+    border-radius: 5px;
+    align-items: center;
+}
+.item-img img{
+    width: 91px;
+}
+.review-container p{
+    margin: 0;
+}
+.review-div{
+    width: 100%;
+ display: flex;
+ justify-content: space-between;   
+ align-items: center;
+ margin: 10px;
+}
+.item-name{
+    font-family: leto;
+    font-weight: 400;
+    font-size: 21px;
+}
+.orange{
+    color: orange;
+}
+.delete-btn button{
+width: 55px;
+height: 55px;
+background: rgba(235, 87, 87, 0.3);
+border: none;
+border-radius: 50%;
+
+}
+.delete-icon{
+    font-size: 27px;
+color:rgba(235, 87, 87, 1) ;
+
+}
