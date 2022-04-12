@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './Login.css'
 
 const Login = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const navigate=useNavigate()
     const [
         signInWithEmailAndPassword,
         user,
         loading,
         error,
-      ] = useSignInWithEmailAndPassword(auth);
+    ] = useSignInWithEmailAndPassword(auth);
+    const navigate = useNavigate()
+    const location = useLocation()
+    const from=location?.state?.from||'/'
     const handleEmailBlur = event => {
         setEmail(event.target.value)
     }
@@ -22,11 +24,11 @@ const Login = () => {
     }
     const handleSubmit = (event) => {
         event.preventDefault()
-        console.log(email,password);
-        signInWithEmailAndPassword(email,password);
+        console.log(email, password);
+        signInWithEmailAndPassword(email, password);
         console.log(user);
         if (user) {
-            navigate('/shop')
+            navigate(from,{replace:true})
         }
     }
     return (
@@ -44,7 +46,7 @@ const Login = () => {
                         <input onBlur={handlePasswordBlur} type="password" name="password" id="" required />
                     </div>
                     <p>{error?.message}</p>
-                    { loading&&<p>loading.....</p>}
+                    {loading && <p>loading.....</p>}
                     <input className='login-button' type="submit" value="Login" />
                 </form>
                 <p className='signUp-message'> New to Ema-john? <Link className='form-link' to="/signup">Create New Account </Link> </p>
